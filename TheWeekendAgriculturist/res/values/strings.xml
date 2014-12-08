@@ -4,5 +4,46 @@
     <string name="app_name">TheWeekendAgriculturist</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="title_activity_base">BaseActivity</string>
+    
+    
+    <!-- Sliding pane -->
+    <string-array name="array_module_name">
+        <item>Intro</item>
+        <item>Events</item>
+        <item>Gallery</item>
+        <item>Experiences</item>
+        <item>Contact Us</item>
+        <item>My Account</item>
+        <item>Suggestions/Queries</item>
+    </string-array>
+    
 
+    <string name="description_image_default">description_image_default</string>
+    
+    <!-- Intro -->
+    <string name="title_intro">Intro</string>
+    
+    
+    <string name="title_events">Events</string>
+    
+    
+    
+    <string name="title_gallery">Gallery</string>
+    
+    
+    
+    <string name="title_experiences">Experiences</string>
+    
+    
+    <string name="title_contactus">Contact Us</string>
+    
+    
+    <string name="title_myaccount">My Account</string>
+    
+    
+    
+    <string name="title_suggestions">Suggestions/Queries</string>
+    
 </resources>
