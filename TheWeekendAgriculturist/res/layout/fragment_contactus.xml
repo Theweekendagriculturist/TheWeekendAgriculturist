@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_title_bar_height"
+        android:background="@color/blackColor" >
+
+        <ImageButton
+            android:id="@+id/menu_btn"
+           	android:layout_width="@dimen/menu_button_width"
+            android:layout_height="@dimen/menu_button_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/value_5"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/description_image_default"
+            android:scaleType="fitXY"
+            android:src="@drawable/menu_btn" 
+            android:paddingRight="40dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+           	/>
+
+        <TextView
+            android:id="@+id/activity_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/title_contactus"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/intro_title_text_size" />
+
+        </RelativeLayout>
+      
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Us"
+            android:textSize="@dimen/intro_title_text_size" />
+</LinearLayout>
