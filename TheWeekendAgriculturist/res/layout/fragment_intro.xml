@@ -36,9 +36,65 @@
 
         </RelativeLayout>
       
-    <TextView
-            android:layout_width="wrap_content"
+    <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/intro_image_height"
+            android:src="@drawable/intro_twa" 
+            android:scaleType="fitXY"
+            android:contentDescription="@string/description_image_default"/>
+    
+    <ScrollView android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:padding="@dimen/scrollview_padding"
+        android:layout_weight="1">
+        <TextView android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/title_intro"
-            android:textSize="@dimen/intro_title_text_size" />
+            
+            android:text="@string/intro_text"/>
+        
+    </ScrollView>
+    
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="@dimen/footer_height"
+        android:background="@color/green"
+        android:orientation="horizontal">
+
+         <ImageButton
+             android:id="@+id/intro_btn_email"
+             style="?android:attr/buttonBarButtonStyle"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_gravity="bottom"
+             android:layout_weight="1"
+             android:contentDescription="@string/description_image_default"
+             android:padding="@dimen/intro_imagebutton_padding"
+             android:src="@drawable/mail"
+             android:scaleType="centerInside" />
+
+            <ImageButton
+                android:id="@+id/intro_btn_blog"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:contentDescription="@string/description_image_default"
+                android:padding="@dimen/intro_imagebutton_padding"
+                android:src="@drawable/blog"
+                android:scaleType="centerInside" />
+
+            <ImageButton
+                android:id="@+id/intro_btn_facebook"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:contentDescription="@string/description_image_default"
+                android:padding="@dimen/intro_imagebutton_padding"
+                android:src="@drawable/fb"
+                android:scaleType="centerInside" />
+        
+        
+    </LinearLayout>
 </LinearLayout>
