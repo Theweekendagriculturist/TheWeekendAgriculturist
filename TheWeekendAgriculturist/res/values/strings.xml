@@ -21,6 +21,7 @@
     
 
     <string name="description_image_default">description_image_default</string>
+    <string name="send">SEND</string>
     
     <!-- Intro -->
     <string name="title_intro">Intro</string>
@@ -31,7 +32,8 @@
     
     
     <string name="title_events">Events</string>
-    
+    <string name="event_tab_all">All Events</string>
+    <string name="event_tab_upcoming">Upcoming</string>
     
     
     <string name="title_gallery">Gallery</string>

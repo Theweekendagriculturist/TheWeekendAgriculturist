@@ -2,9 +2,15 @@
 <resources>
 
     <color name="orange">#CE5C12</color>
-    <color name="green">#9bc346</color>
+    <color name="green">#659d32</color>
+    <color name="green_light">#c5e3bf</color>
     <color name="white">#FFFFFF</color>
     <color name="blackColor">#FF000000</color>
     <color name="slidingpane_background_color">#EEEFDF</color>
+    
+    <!-- Events -->
+    <color name="event_divider_color">#BABCA1</color>
+    <color name="orange_light">#EA9056</color>
+        
 
 </resources>

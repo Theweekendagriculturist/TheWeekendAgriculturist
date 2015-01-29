@@ -36,9 +36,43 @@
 
         </RelativeLayout>
       
-    <TextView
-            android:layout_width="wrap_content"
+    <TabHost
+        android:id="@+id/tab_host"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Events"
-            android:textSize="@dimen/intro_title_text_size" />
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/green"
+                android:padding="@dimen/value_10" >
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ListView
+                    android:id="@+id/event_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:divider="@color/event_divider_color"
+                    android:dividerHeight="@dimen/value_1"
+                     >
+                </ListView>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
 </LinearLayout>
