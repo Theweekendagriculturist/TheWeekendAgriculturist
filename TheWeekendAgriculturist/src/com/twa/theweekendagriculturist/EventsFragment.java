@@ -1,24 +1,31 @@
 package com.twa.theweekendagriculturist;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TabHost;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 
+import com.twa.theweekendagriculturist.Model.Event;
+import com.twa.theweekendagriculturist.adapters.EventListAdapter;
 import com.twa.theweekendagriculturist.utility.Constants;
 import com.twa.theweekendagriculturist.utility.SlidingPaneInterface;
 
@@ -31,6 +38,8 @@ public class EventsFragment extends Fragment implements
 	private TextView tabTitleTextView;
 	private TabHost host;
 
+	private EventListAdapter eventListAdapter;
+	
 	 public View onCreateView(LayoutInflater inflater, ViewGroup container,
 	            Bundle savedInstanceState) {
 
@@ -51,6 +60,9 @@ public class EventsFragment extends Fragment implements
 			// INITIALIZE LIST AND SET ADAPTER
 			eventListView = (ListView) viewFragment
 					.findViewById(R.id.event_list);
+			eventListAdapter = new EventListAdapter(getActivity(), false);
+			eventListView.setAdapter(eventListAdapter);
+			setOnclickListenerForListView();
 			
 			
 			
@@ -60,6 +72,30 @@ public class EventsFragment extends Fragment implements
 	        return viewFragment;
 	  }
 	 
+	 
+	 private void setOnclickListenerForListView() {
+		 eventListView.setOnItemClickListener(new OnItemClickListener() {
+
+				@Override
+				public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+						long arg3) {
+
+					
+
+					Event event = (Event) eventListAdapter.getItem(arg2);
+
+					Intent eventDetailsIntent = new Intent(getActivity(),
+							EventDetailsActivity.class);
+					Bundle bundle=new Bundle();
+			   		bundle.putParcelable("event", (Parcelable) event);
+			   		eventDetailsIntent.putExtras(bundle);
+					startActivity(eventDetailsIntent);
+				}
+			});
+
+		
+ 
+	 }
 	 private void setupTabs(View viewFragment) {
 			tabNamesList.add(getActivity().getResources().getString(
 					R.string.event_tab_upcoming));

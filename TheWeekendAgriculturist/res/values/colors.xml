@@ -11,6 +11,7 @@
     <!-- Events -->
     <color name="event_divider_color">#BABCA1</color>
     <color name="orange_light">#EA9056</color>
+    <color name="blue_date">#0066cc</color>
         
 
 </resources>
